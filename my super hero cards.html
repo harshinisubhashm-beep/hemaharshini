@@ -1,0 +1,88 @@
+<html>
+<head>
+    <title>My Super Hero Cards</title>
+    <style>
+        .hero-card {
+            background-color: #fff;
+            border: 3px solid #000;
+            border-radius: 12px;
+            width: 200px;
+            padding: 20px;
+            margin: 10px;
+        }
+       body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f4ff;
+            text-align: center;
+            padding: 30px;
+        }
+        h1 {
+            color: #ff5a43;
+        }
+        p {
+            color: #555;
+        }
+        .cards {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 25px;
+        }
+        .hero-name {
+            font-size: 22px;
+            font-weight: bold;
+            color: #333;
+        }
+        .hero-power {
+            color: #666;
+            margin-top: 10px;
+            font-size: 14px;
+        }
+        button {
+            background: #ff5a43;
+            color: white;
+            border: none;
+            padding: 12px 28px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>My Super Hero Cards</h1>
+    <p>Use a Java class to build super hero cards!</p>
+    <button onclick="showHeroes()">Show Heroes</button>
+    <div class="cards">
+        <div id="card1" class="hero-card"></div>
+        <div id="card2" class="hero-card"></div>
+        <div id="card3" class="hero-card"></div>
+    </div>
+
+    <script>
+        class SuperHero {
+            constructor(name, power) {
+                this.name = name;
+                this.power = power;
+            }
+
+            displayCard(cardId) {
+                const card = document.getElementById(cardId);
+                card.innerHTML = `<div class="hero-name">${this.name}</div><div class="hero-power">${this.power}</div>`;
+            }
+        }
+
+        function showHeroes() {
+            const hero1 = new SuperHero("Superman", "Flight, Super Strength");
+            const hero2 = new SuperHero("Wonder Woman", "Super Strength, Combat Skills");
+            const hero3 = new SuperHero("Spider-Man", "Wall-Crawling, Spider-Sense");   
+
+            hero1.displayCard("card1");
+            hero2.displayCard("card2");
+            hero3.displayCard("card3");
+        }
+    </script>
+</body>
+</html>
