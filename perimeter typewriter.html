@@ -1,0 +1,49 @@
+--<html>
+    <head>
+        <title>Perimeter typewritter</title>
+    </head>
+    <body>
+        <h1>Area calculator</h1>
+        <script>
+            var choice =prompt(
+                "Welcome to perimeter Calculator.\n" +
+            "Please Enter your Choice.\n" +
+            "1. perimeter of Rectangle.\n" +
+            "2. perimeter of Triangle.\n" +
+            "3. perimeter of Circle.\n" 
+           
+        );
+          if (choice == '1') {
+
+            var l = prompt('Enter the Length');
+            var b = prompt('Enter the breadth');
+
+            var result = 2*(Number(l) + Number(b));
+
+            alert('The Area is ' + result);
+
+        }
+        else if (choice == '2') {
+
+            var S1 = prompt('Enter the first side');
+            var S2 = prompt('Enter the second side');
+            var S3 = prompt('Enter the third side');
+            var result = Number(S1)+ Number(S2)+ Number(S3);
+
+            alert('The Area is ' + result);
+
+        }
+         else if (choice == '3') {
+
+            var r = prompt('Enter the radius');
+
+            var result = 3.14 * 2 * Number(r);
+
+            alert('The Area is ' + result);
+
+        }
+            
+        </script>
+
+    </body>
+</html>
