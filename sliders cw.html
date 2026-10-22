@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sliders in html</title>
+<style>
+        .pimg1, .pimg2, .pimg3 {
+        position: relative;
+        opacity: 0.70;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        }
+
+        .pimg1 {
+        background-image: url("pic1.png");
+    min-height: 100%;
+}
+
+.pimg2 {
+    background-image: url("nature.jpg");
+    min-height: 400px;
+}
+
+.pimg3 {
+    background-image: url("tempe.jpg");
+    min-height: 400px;
+}
+
+.section {
+    text-align: centre;
+    padding: 50px 80px;
+}
+.section light {
+    background-color: #f4f4f4;
+    color: #666;
+}
+.section-dark {
+    nackground-color: #282e34;
+    color: #ddd;
+}
+
+.ptext {
+    position: absolute;
+    top: 50%;
+    width: 100%
+    text-align: centre;
+    color: #000;
+    font-size: 27px;
+    letter-spacing: 8px;
+    text-transform:uppercase;
+}
+
+.ptext .border {
+    background-color: #111;
+    color: #fff;
+    padding: 20px;
+}
+
+.ptext .border.trans {
+    background-color: transparent;
+}
+
+media(max-width: 568px) {
+    .pimg1. .pimg2, .pimg3 {
+        background-attachment: scroll;
+    }
+
+}
+
+        </style>
+    </head>
+
+    <body>
+
+        <section>
+            <img class="mySlides" src="pic1.png" style="height: 480px; width:888px;">
+            <img class="mySlides" src="pic2.jpg" style="height: 480px; width:888px;">
+            <img class="mySlides" src="pic3.jpg"style="height: 480px; width:888px;">
+            
+            
+        </section>
+        <span class="border trans" style="font-size: 40px;">
+            <centre>welcome all to this website</centre>
+        </span><br>
+        <section class="section section-dark">
+            <h2>Section one</h2>
+            <p>Web development is the work involved in developing a Wen site for the Internet (World Wide Web) 0or an important ( a private network) .</p>
+        </section>
+        <div class="pimg3">
+            <dic class="ptext">
+                <span class="border trans">Image two text</span>
+                <div>
+                </div>
+        <script>
+            var myIndex = 0;
+            function carousel() {
+                var i;
+                var x = document.getElementsByClassName("mySlides");
+                for (i = 0; i < x.length;i++) {
+                    x[i].style.display = "none";
+                }
+                myIndex++;
+                if (myIndex > x.length) { myIndex = 1}
+                x[myIndex - 1].style.display = "block";
+                setTimeout(carousel, 1000);
+
+            }
+            carousel()
+        </script>
+
+        
+    </body>
+</html>
